@@ -22,3 +22,8 @@ if __name__ == '__main__':
     cleaned.to_csv(args.output_file, index=False)
 
     print(cleaned.shape)
+
+
+print(df)
+print("Output file shape:")
+print(df.shape)
