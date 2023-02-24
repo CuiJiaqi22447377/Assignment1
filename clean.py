@@ -9,7 +9,6 @@ def clean(input_file1, input_file2):
     df = df[~df['job'].str.contains('Insurance')]
     return df
 
-
 if __name__ == '__main__':
     import argparse
 
@@ -19,11 +18,7 @@ if __name__ == '__main__':
     parser.add_argument('output_file', help='Cleaned data file(CSV)')
     args = parser.parse_args()
 
-    cleaned = clean(args.contact_info_file, args.other_info_file)
+    cleaned = clean(args.contact_info_file,args.other_info_file)
     cleaned.to_csv(args.output_file, index=False)
 
     print(cleaned.shape)
-
-    print(df)
-    print("Output file shape:")
-    print(df.shape)
